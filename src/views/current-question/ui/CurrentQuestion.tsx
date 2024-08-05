@@ -22,7 +22,7 @@ export const CurrentQuestion: React.FC = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
     const currentAnswer = formData.get('answer') as string;
 
     if (currentAnswer === currentQuestion.correctAnswer) {
