@@ -32,7 +32,7 @@ export const Select = <T = string,>({
   onSelect,
 }: Props<T>) => {
   const handleSelect = (event: ChangeEvent<HTMLSelectElement>): void => {
-    onSelect({ name, value: event.target.value });
+    onSelect({ name, value: event.target.value as T });
   };
 
   return (
